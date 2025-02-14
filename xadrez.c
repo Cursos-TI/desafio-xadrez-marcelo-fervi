@@ -6,13 +6,11 @@
 
 int main() {
     // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     const int bispoMovimentacaoCasas = 5; //5 casas na diagonal superior direita
     const int torreMovimentacaoCasas = 5; //5 casas para a direita
     const int rainhaMovimentacaoCasas = 8; //8 casas para a esquerda
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Implementação de Movimentação do Bispo (5 casas na diagonal, direita e cima)
     int quantiaDeCasasRestantesParaOBispoAndar = bispoMovimentacaoCasas;
     
     printf("Movimentação do Bispo:\n");
@@ -23,8 +21,7 @@ int main() {
     }
     printf("\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    // Implementação de Movimentação da Torre (5 casas para a direita)
     int quantiaDeCasasRestantesParaATorreAndar = torreMovimentacaoCasas;
 
     printf("Movimentação da Torre:\n");
@@ -36,18 +33,35 @@ int main() {
     while (quantiaDeCasasRestantesParaATorreAndar > 0);
     printf("\n");
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    // Implementação de Movimentação da Rainha (8 casas para a esquerda)
     int quantiaDeCasasRestantesParaARainhaAndar = rainhaMovimentacaoCasas;
 
     printf("Movimentação da Rainha:\n");
     for (int indiceDoMovimento = 0; indiceDoMovimento < quantiaDeCasasRestantesParaARainhaAndar; indiceDoMovimento++) {
         printf("Esquerda\n");
     }
+    printf("\n");
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    // (total de casas não definido pelo exercício, somente as direções baixo e esquerda,
+    // então decidi utilizar 3 para baixo e 3 para a esquerda)
+    const int cavaloCasasPorEtapa = 3;
+
+    printf("Movimentação do Cavalo:\n");
+    for (int etapaDoMovimento = 0; etapaDoMovimento < 2; etapaDoMovimento++) {
+        int casasRestantesParaAndar = cavaloCasasPorEtapa;
+        while (casasRestantesParaAndar > 0) {
+            casasRestantesParaAndar--;
+
+            if (etapaDoMovimento == 0) {
+                printf("Baixo\n");
+            }
+            else {
+                printf("Esquerda\n");
+            }
+        }
+    }
+    printf("\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
