@@ -61,7 +61,7 @@ void andarCasa(int direcoes, int quantiaDeCasasRestantes) {
     }
 }
 
-void desafioNovatoEAventureiro() {
+void desafioNovato() {
     // Nível Novato - Movimentação das Peças
     const int bispoMovimentacaoCasas = 5; //5 casas na diagonal superior direita
     const int torreMovimentacaoCasas = 5; //5 casas para a direita
@@ -97,10 +97,15 @@ void desafioNovatoEAventureiro() {
         printf("Esquerda\n");
     }
     printf("\n");
+}
+
+//Este Desafio re-utilizará os códigos do Novato, e acrescentará ações extras.
+void desafioAventureiro() {
+    desafioNovato();
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // (total de casas não definido pelo exercício, somente as direções baixo e esquerda,
-    // então decidi utilizar 3 para baixo e 3 para a esquerda)
+    // (como o total de casas não foi definido pelo exercício, somente as direções baixo e esquerda,
+    // decidi utilizar 3 para baixo e 3 para a esquerda)
     const int cavaloCasasPorEtapa = 3;
 
     printf("Movimentação do Cavalo:\n");
@@ -188,7 +193,8 @@ void desafioMestre() {
 }
 
 int main() {
-    //desafioNovatoEAventureiro();
+    //desafioNovato();
+    //desafioAventureiro();
     desafioMestre();
 
     return 0;
